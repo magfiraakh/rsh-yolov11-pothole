@@ -1,44 +1,19 @@
-"""
-Models package — Arsitektur YOLOv11Scale dengan Regression Scale Head.
-
-Ekspor utama:
-- YOLOv11Scale
-- RegressionScaleHead
-- MetadataEncoder
-- ModelOutput
-- compute_gsd_gt_batch
-"""
+# src/adaptive_scale/models/__init__.py
 
 from .yolo_scale import (
     YOLOv11Scale,
-    RegressionScaleHead,
-    MetadataEncoder,
-    ConvBNAct,
-    TinyBackbone,
-    TinyNeck,
-    DetectHead,
-    SegHead,
     ModelOutput,
+    build_yolo_scale_tiny,
     compute_gsd_gt_batch,
-    META_IDX_ALTITUDE,
-    META_IDX_FOCAL_LEN,
-    META_IDX_SENSOR_W,
-    META_IDX_RESOLUTION,
+    compute_gsd_gt_scalar,
+    compute_physical_area_from_mask,
 )
 
 __all__ = [
     "YOLOv11Scale",
-    "RegressionScaleHead",
-    "MetadataEncoder",
-    "ConvBNAct",
-    "TinyBackbone",
-    "TinyNeck",
-    "DetectHead",
-    "SegHead",
     "ModelOutput",
+    "build_yolo_scale_tiny",
     "compute_gsd_gt_batch",
-    "META_IDX_ALTITUDE",
-    "META_IDX_FOCAL_LEN",
-    "META_IDX_SENSOR_W",
-    "META_IDX_RESOLUTION",
+    "compute_gsd_gt_scalar",
+    "compute_physical_area_from_mask",
 ]
